@@ -9,7 +9,7 @@
     content="31-page printable Animal Alphabet Workbook. Trace, match, read &amp; learn A-Z. Instant PDF download.">
   <meta property="og:title" content="Animal Alphabet Learning Workbook — EffikitSolutions">
   <meta property="og:description"
-    content="31-page printable workbook for kids ages 2-5. Trace, match &amp; read A-Z with animals. Instant PDF download.">
+    content="31-page printable workbook for kids ages 2+. Trace, match &amp; read A-Z with animals. Instant PDF download.">
   <meta property="og:type" content="product">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon"
@@ -460,7 +460,8 @@
       outline: none;
     }
 
-    .ticker-band:active, .ticker-band.is-dragging {
+    .ticker-band:active,
+    .ticker-band.is-dragging {
       cursor: grabbing;
     }
 
@@ -809,9 +810,11 @@
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
     }
+
     .abc-grid::-webkit-scrollbar {
       display: none;
     }
+
     .abc-chip {
       flex: 0 0 54px;
       height: 54px;
@@ -829,11 +832,13 @@
       transition: transform .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
       position: relative;
       user-select: none;
-      box-shadow: 0 2px 8px rgba(22,35,58,.06);
+      box-shadow: 0 2px 8px rgba(22, 35, 58, .06);
     }
+
     .abc-chip:active {
       transform: scale(.92);
     }
+
     .abc-chip.active {
       background: var(--coral);
       border-color: var(--coral);
@@ -847,6 +852,7 @@
       border-color: #E2E8F0;
       color: #8A99AD;
     }
+
     .abc-chip.locked .lock-ic {
       font-size: 11px;
       position: absolute;
@@ -854,11 +860,24 @@
       right: 4px;
       line-height: 1;
     }
+
     @keyframes ctaHighlightPulse {
-      0% { transform: scale(1); box-shadow: 0 10px 22px -8px rgba(255,90,60,.55); }
-      50% { transform: scale(1.06); box-shadow: 0 16px 36px 4px rgba(255,90,60,.80); }
-      100% { transform: scale(1); box-shadow: 0 10px 22px -8px rgba(255,90,60,.55); }
+      0% {
+        transform: scale(1);
+        box-shadow: 0 10px 22px -8px rgba(255, 90, 60, .55);
+      }
+
+      50% {
+        transform: scale(1.06);
+        box-shadow: 0 16px 36px 4px rgba(255, 90, 60, .80);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 10px 22px -8px rgba(255, 90, 60, .55);
+      }
     }
+
     .cta-highlight {
       animation: ctaHighlightPulse 0.8s ease-in-out !important;
     }
@@ -1327,7 +1346,8 @@
         <span class="price-off">50% OFF</span>
       </div>
 
-      <a href="https://www.etsy.com/shop/EffikitSolutions" class="cta-btn" target="_blank" rel="noopener">Get the
+      <a href="https://www.etsy.com/listing/4554275975/abc-animal-alphabet-workbook-letter" class="cta-btn"
+        target="_blank" rel="noopener">Get the
         Workbook on Etsy →</a>
       <div class="cta-sub">Instant download · No printer subscription · Lifetime use</div>
     </section>
@@ -1566,7 +1586,8 @@
     <div class="final-cta reveal">
       <h2>Ready when you are 🐾</h2>
       <p>31 pages. 26 animals. One instant download.</p>
-      <a href="https://www.etsy.com/shop/EffikitSolutions" class="cta-btn" target="_blank" rel="noopener">Get the
+      <a href="https://www.etsy.com/listing/4554275975/abc-animal-alphabet-workbook-letter" class="cta-btn"
+        target="_blank" rel="noopener">Get the
         Workbook on Etsy →</a>
       <div class="guarantee">🔒 Safe checkout through Etsy Purchase Protection</div>
     </div>
@@ -1577,7 +1598,8 @@
 
   <div class="stickybar" id="stickybar">
     <div class="sb-price">$6.99<small>was $13.99</small></div>
-    <a href="https://www.etsy.com/shop/EffikitSolutions" class="cta-btn" target="_blank" rel="noopener">Get it on Etsy
+    <a href="https://www.etsy.com/listing/4554275975/abc-animal-alphabet-workbook-letter" class="cta-btn"
+      target="_blank" rel="noopener">Get it on Etsy
       →</a>
   </div>
 
@@ -1628,7 +1650,7 @@
           else if (type === 'medium') navigator.vibrate([15, 30, 15]);
           else if (type === 'pop') navigator.vibrate([10, 20, 15]);
           else navigator.vibrate(15);
-        } catch (e) {}
+        } catch (e) { }
       }
     }
 
@@ -1903,7 +1925,7 @@
         startAngle = curAngle;
         dragVelocity = 0;
         stopAutoPlay();
-        try { band.setPointerCapture(e.pointerId); } catch (err) {}
+        try { band.setPointerCapture(e.pointerId); } catch (err) { }
       });
 
       band.addEventListener('pointermove', function (e) {
@@ -1926,7 +1948,7 @@
         if (!isDragging) return;
         isDragging = false;
         band.classList.remove('is-dragging');
-        try { band.releasePointerCapture(e.pointerId); } catch (err) {}
+        try { band.releasePointerCapture(e.pointerId); } catch (err) { }
 
         if (Math.abs(dragVelocity) > 0.3) {
           curAngle += dragVelocity * 60;
